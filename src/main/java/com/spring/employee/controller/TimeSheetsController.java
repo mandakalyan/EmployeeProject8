@@ -84,8 +84,11 @@ public class TimeSheetsController
 	@GetMapping("/validate")
 	public ResponseEntity<String> validateOtlAndTimex() {
 	    try {
-	        Optional<Otl> optionalOtl = otlRepo.findById(2); // Replace 1 with the desired ID
-	        Optional<Timex> optionalTimex = timexRepo.findById(2); // Replace 1 with the desired ID
+	    	Otl otl1 =new Otl();
+	    	Timex timex1 =new Timex();
+	    	
+	        Optional<Otl> optionalOtl = otlRepo.findById(otl1.getOtlId()); // Replace 1 with the desired ID
+	        Optional<Timex> optionalTimex = timexRepo.findById(timex1.getTimexId()); // Replace 1 with the desired ID
 
 	        if (optionalOtl.isPresent() && optionalTimex.isPresent()) {
 	            Otl otl = optionalOtl.get();
