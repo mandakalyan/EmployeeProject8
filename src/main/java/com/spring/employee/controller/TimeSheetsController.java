@@ -112,7 +112,7 @@ public class TimeSheetsController
 	}	
 	
 	
-	@GetMapping("getotls")
+	@GetMapping("/getotls")
 	public List< Otl> getOtl()
 	{
 		
